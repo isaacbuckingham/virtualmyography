@@ -58,13 +58,27 @@ namespace Autohand.Demo {
             hand.SetGrip(grabAxis.action.ReadValue<float>(), squeezeAxis.action.ReadValue<float>());
         }
 
-        private void Grab(InputAction.CallbackContext grab){
+// made public
+        public void MyoGrab(){
             if (!grabbing){
                 hand.Grab();
                 grabbing = true;
             }
         }
         
+        public void MyoRelease(){
+            if (grabbing){
+                hand.Release();
+                grabbing = false;
+            }
+        }
+        private void Grab(InputAction.CallbackContext grab){
+            if (!grabbing){
+                hand.Grab();
+                grabbing = true;
+            }
+        }
+
         private void Release(InputAction.CallbackContext grab){
             if (grabbing){
                 hand.Release();
