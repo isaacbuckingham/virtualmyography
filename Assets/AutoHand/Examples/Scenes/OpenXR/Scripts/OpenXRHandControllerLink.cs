@@ -13,18 +13,19 @@ namespace Autohand.Demo {
         public InputActionProperty squeezeAction;
         public InputActionProperty stopSqueezeAction;
         public InputActionProperty hapticAction;
-
-
+        [Header("Myo Controller")]
+        private MyoEvents myoEvents;
         private bool squeezing;
         private bool grabbing;
         private void Start() {
+            myoEvents = GetComponent<MyoEvents>();
+            
             if(hand.left)
                 handLeft = this;
             else
                 handRight = this;
+            
         }
-
-
         public void OnEnable(){
             if (grabAction == squeezeAction){
                 Debug.LogError("AUTOHAND: You are using the same button for grab and squeeze on HAND CONTROLLER LINK, this will create conflict or errors", this);
@@ -33,7 +34,9 @@ namespace Autohand.Demo {
             if(grabAxis.action != null) grabAxis.action.Enable();
             if(squeezeAxis.action != null) squeezeAxis.action.Enable();
             if(hapticAction.action != null) hapticAction.action.Enable();
+            //
             if(grabAction.action != null) grabAction.action.performed += Grab;
+            //
             if (grabAction.action != null) grabAction.action.Enable();
             if (grabAction.action != null) grabAction.action.performed += Grab;
             if (releaseAction.action != null) releaseAction.action.Enable();
@@ -56,22 +59,15 @@ namespace Autohand.Demo {
 
         private void Update() {
             hand.SetGrip(grabAxis.action.ReadValue<float>(), squeezeAxis.action.ReadValue<float>());
+
+            if(myoEvents.emgRawReader.readVal == "0"){
+                if (!grabbing){
+                    hand.Grab();
+                    grabbing = true;
+                }
+            }
         }
 
-// made public
-        public void MyoGrab(){
-            if (!grabbing){
-                hand.Grab();
-                grabbing = true;
-            }
-        }
-        
-        public void MyoRelease(){
-            if (grabbing){
-                hand.Release();
-                grabbing = false;
-            }
-        }
         private void Grab(InputAction.CallbackContext grab){
             if (!grabbing){
                 hand.Grab();

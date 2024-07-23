@@ -5,17 +5,8 @@ using UnityEngine.Events;
 
 public class MyoEvents : MonoBehaviour
 {
-    private EMGRawReader emgRawReader;
+    public EMGRawReader emgRawReader;
     private Renderer rend;
-
-    public UnityEvent Gesture0;
-    public UnityEvent Gesture1;
-    public UnityEvent Gesture2;
-    public UnityEvent Gesture3;
-    public UnityEvent Gesture4;
-    public UnityEvent Gesture5;
-    public UnityEvent Gesture6;
-    public UnityEvent PressK;
 
     // Start is called before the first frame update
     void Start()
@@ -27,36 +18,33 @@ public class MyoEvents : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (emgRawReader.readVal)
+        if (emgRawReader.readVal == "2")
         {
-            case "0":
-                Gesture0?.Invoke();
-                break;
-            case "1":
-                Gesture1?.Invoke();
-                break;
-            case "2":
-                Gesture2?.Invoke();
-                break;
-            case "3":
-                Gesture3?.Invoke();
-                break;
-            case "4":
-                Gesture4?.Invoke();
-                break;
-            case "5":
-                Gesture5?.Invoke();
-                break;
-            case "6":
-                Gesture6?.Invoke();
-                break;
-            default:
-                break;
+            transform.Rotate(0,0,0);
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        if (emgRawReader.readVal == "1")
         {
-            PressK?.Invoke();
-            Debug.Log("K Key Pressed");
+            transform.Rotate(1,0,0);
         }
-    }
+        if (emgRawReader.readVal == "0")
+        {
+            transform.Rotate(-1,0,0);
+        }
+        if (emgRawReader.readVal == "3")
+        {
+            transform.Rotate(0,0,1);
+        }
+        if (emgRawReader.readVal == "4")
+        {
+            transform.Rotate(0,0,-1);
+        }
+        if (emgRawReader.readVal == "5")
+        {
+            transform.Rotate(0,1,0);
+        }
+        if (emgRawReader.readVal == "6")
+        {
+            transform.Rotate(0,-1,0);
+        }
+        }
 }

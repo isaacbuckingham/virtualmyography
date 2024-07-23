@@ -15,6 +15,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Grip Pressed (R)1",
+                    "type": "Button",
+                    "id": "5246569c-1042-4b7d-8388-e10637d0d3ef",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.85)",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Grip Released (R)",
                     "type": "Button",
                     "id": "2bcdcfe6-d375-47cf-8611-8a091d0e1373",
@@ -408,6 +417,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Haptic (L)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "52ff4dd1-a846-4682-b467-21b8cb1b907f",
+                    "path": "<Keyboard>/k",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grip Pressed (R)1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

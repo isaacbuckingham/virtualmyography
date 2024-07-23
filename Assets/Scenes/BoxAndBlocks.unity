@@ -10700,12 +10700,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
         type: 3}
+      propertyPath: Gesture0.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
+        type: 3}
       propertyPath: PressK.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
         type: 3}
+      propertyPath: Gesture0.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
+        type: 3}
       propertyPath: PressK.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1016947212}
+    - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
+        type: 3}
+      propertyPath: Gesture0.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1016947212}
     - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
@@ -10720,12 +10735,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
         type: 3}
+      propertyPath: Gesture0.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
+        type: 3}
+      propertyPath: Gesture0.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
+        type: 3}
       propertyPath: PressK.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Autohand.Hand, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
         type: 3}
+      propertyPath: Gesture0.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Autohand.Hand, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
+        type: 3}
       propertyPath: PressK.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 812505049555389324, guid: f13bbbc9578242a44953eec81cfb27d4,
+        type: 3}
+      propertyPath: Gesture0.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 922144104283790742, guid: f13bbbc9578242a44953eec81cfb27d4,
