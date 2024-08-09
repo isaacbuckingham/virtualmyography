@@ -6623,6 +6623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emgRawReader: {fileID: 0}
+  hand: {fileID: 0}
 --- !u!1 &1065301521
 GameObject:
   m_ObjectHideFlags: 0
@@ -7718,6 +7719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emgRawReader: {fileID: 0}
+  hand: {fileID: 0}
 --- !u!1 &1254066034
 GameObject:
   m_ObjectHideFlags: 0
@@ -16066,6 +16068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emgRawReader: {fileID: 0}
+  hand: {fileID: 0}
 --- !u!114 &8598023549610308364
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Autohand;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,11 +9,17 @@ public class MyoEvents : MonoBehaviour
     public EMGRawReader emgRawReader;
     private Renderer rend;
 
+    public Hand hand;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        hand = GameObject.FindObjectOfType<Hand>();//GameObject.Find("Hand");
+        // hand = FindObjectOfType<Hand>();
         emgRawReader = FindObjectOfType<EMGRawReader>();
         rend = GetComponent<Renderer>();  
+
     }
 
     // Update is called once per frame
@@ -20,7 +27,7 @@ public class MyoEvents : MonoBehaviour
     {
         if (emgRawReader.readVal == "2")
         {
-            transform.Rotate(0,0,0);
+            hand.Grab();
         }
         if (emgRawReader.readVal == "1")
         {
@@ -48,3 +55,4 @@ public class MyoEvents : MonoBehaviour
         }
         }
 }
+

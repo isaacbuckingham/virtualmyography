@@ -710,7 +710,7 @@ MonoBehaviour:
   handType: 3
   singleHandOnly: 0
   instantGrab: 0
-  useGentleGrab: 0
+  useGentleGrab: 1
   maintainGrabOffset: 0
   parentOnGrab: 1
   heldNoFriction: 1

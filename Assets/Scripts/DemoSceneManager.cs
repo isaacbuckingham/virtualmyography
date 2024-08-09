@@ -1,9 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class DemoSceneManager : MonoBehaviour
 {
+    public KeyCode key0 = KeyCode.Alpha0;
+    public KeyCode key1 = KeyCode.Alpha1;
+    public KeyCode key2 = KeyCode.Alpha2;
+    public KeyCode key3 = KeyCode.Alpha3;
+    public KeyCode key4 = KeyCode.Alpha4;
+    public KeyCode key5 = KeyCode.Alpha5;
+    public KeyCode key6 = KeyCode.Alpha6;
+
+
     private EMGRawReader emgRawReader;
     private Renderer rend;
     // Start is called before the first frame update
